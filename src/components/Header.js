@@ -4,9 +4,11 @@ import { StaticQuery, graphql } from "gatsby"
 const TitleAndIntro = ({ data }) => {
   const { title, description } = data.site.siteMetadata
   return (
-    <div className="header">
-      <h1 className="header-title">{title}</h1>
-      <p className="header-description">{description}</p>
+    <div className="header d-flex justify-content-center">
+      <div>
+        <h1 className="header-title">{title}</h1>
+        <p className="header-description">{description}</p>
+      </div>
     </div>
   )
 }

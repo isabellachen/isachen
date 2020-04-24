@@ -1,6 +1,6 @@
 ---
 path: "/go-for-js-devs"
-date: "2020-04-20"
+date: "2020-04-19"
 title: "Go for JavaScript Developers"
 tags: ["this", "that"]
 excerpt: "Notes on learning GoLang from a JavaScript developer"
