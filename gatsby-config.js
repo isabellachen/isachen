@@ -5,6 +5,20 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: "Isa Chen",
+    description: "Another Web Dev Blog",
+  },
+  plugins: [
+    `gatsby-transformer-remark`,
+    "gatsby-plugin-root-import",
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
+  ],
 }
