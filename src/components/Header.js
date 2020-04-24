@@ -5,8 +5,8 @@ const TitleAndIntro = ({ data }) => {
   const { title, description } = data.site.siteMetadata
   return (
     <div className="header">
-      <h1>{title}</h1>
-      <p>{description}</p>
+      <h1 className="header-title">{title}</h1>
+      <p className="header-description">{description}</p>
     </div>
   )
 }

@@ -1,5 +1,13 @@
 @import "../base/variables";
 
 .header {
-  color: $c-primary;
+  &-title {
+    color: $c-darker;
+    font-family: $ff-heading;
+  }
+
+  &-description {
+    color: $c-dark;
+    font-family: $ff-body;
+  }
 }
