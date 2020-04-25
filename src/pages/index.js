@@ -5,11 +5,16 @@ import BlogPosts from "src/components/BlogPosts"
 import "src/styles/app.scss"
 
 export default ({ data }) => {
-  return (
-    <Layout>
-      <BlogPosts data={data} />
-    </Layout>
-  )
+  if (typeof window !== "undefined") {
+    window.location = "/blog"
+  }
+
+  return null
+  // return (
+  //   <Layout>
+  //     <BlogPosts data={data} />
+  //   </Layout>
+  // )
 }
 
 export const query = graphql`

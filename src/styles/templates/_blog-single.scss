@@ -1,0 +1,38 @@
+$chevron-size: 30px;
+
+.blog_single {
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-next,
+  &-previous {
+    display: flex;
+    align-items: center;
+  }
+
+  &-next_chevron {
+    &:after {
+      content: "";
+      background-image: url(../assets/icons/chevron-down.svg);
+      background-size: $chevron-size $chevron-size;
+      display: inline-block;
+      height: $chevron-size;
+      width: $chevron-size;
+      transform: rotate(270deg);
+    }
+  }
+
+  &-previous_chevron {
+    &:before {
+      content: "";
+      background-image: url(../assets/icons/chevron-down.svg);
+      background-size: $chevron-size $chevron-size;
+      display: inline-block;
+      height: $chevron-size;
+      width: $chevron-size;
+      transform: rotate(90deg);
+    }
+  }
+}

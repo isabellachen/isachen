@@ -1,36 +1,76 @@
 const path = require("path")
 
-exports.createPages = ({ graphql, actions }) => {
+const createBlogPages = (createPage, posts) => {
+  const BlogPosts = path.resolve("src/templates/BlogPosts.js")
+  createPage({
+    path: "/blog",
+    component: BlogPosts,
+  })
+}
+
+const createPortfolioPages = (createPage, posts) => {
+  const PortfolioPosts = path.resolve("src/templates/PortfolioPosts.js")
+  createPage({
+    path: "/portfolio",
+    component: PortfolioPosts,
+  })
+}
+
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const blogPostSingle = path.resolve("src/templates/BlogPostSingle.js")
-  return graphql(
-    `
-      query BlogPostsPathQuery {
-        allMarkdownRemark {
-          edges {
-            node {
-              frontmatter {
-                path
+  try {
+    const query = await graphql(
+      `
+        query BlogPostsPathQuery {
+          allMarkdownRemark(
+            sort: { order: ASC, fields: [frontmatter___date] }
+          ) {
+            edges {
+              next {
+                frontmatter {
+                  path
+                  title
+                }
+              }
+              previous {
+                frontmatter {
+                  path
+                  title
+                }
+              }
+              node {
+                frontmatter {
+                  path
+                  category
+                }
               }
             }
           }
         }
-      }
-    `,
-    { limit: 1000 }
-  ).then(result => {
-    if (result.errors) {
-      console.error(result.errors)
-    }
+      `,
+      { limit: 1000 }
+    )
 
-    console.log(JSON.stringify(result.data.allMarkdownRemark.edges))
-    const edges = result.data.allMarkdownRemark.edges
-    edges.forEach(({ node }) => {
-      console.log(JSON.stringify(node.frontmatter.path))
+    const posts = query.data.allMarkdownRemark.edges
+
+    posts.forEach(({ node, next, previous }) => {
+      const path = node.frontmatter.path
+
+      createBlogPages(createPage, posts)
+      createPortfolioPages(createPage, posts)
+
       createPage({
-        path: `${node.frontmatter.path}`,
+        path,
         component: blogPostSingle,
+        context: {
+          slug: path, // use 'slug', as 'path' is reserved keyword. Access in component as props.pageContext.slug
+          previous,
+          next,
+        },
       })
     })
-  })
+  } catch (err) {
+    console.error(err)
+  }
 }

@@ -1,12 +1,14 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
 const TitleAndIntro = ({ data }) => {
   const { title, description } = data.site.siteMetadata
   return (
     <div className="header d-flex justify-content-center">
       <div>
-        <h1 className="header-title">{title}</h1>
+        <Link to="/">
+          <h1 className="header-title">{title}</h1>
+        </Link>
         <p className="header-description">{description}</p>
       </div>
     </div>
