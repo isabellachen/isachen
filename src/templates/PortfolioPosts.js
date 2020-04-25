@@ -2,11 +2,11 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "src/components/Layout"
 
-export default ({ data }) => {
+export default ({ data, location }) => {
   const { edges } = data.allMarkdownRemark
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div>
         {edges.map(edge => {
           const { title, path, date, excerpt } = edge.node.frontmatter
@@ -32,6 +32,7 @@ export const query = graphql`
     ) {
       edges {
         node {
+          id
           frontmatter {
             path
             date

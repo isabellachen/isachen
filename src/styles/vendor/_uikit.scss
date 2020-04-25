@@ -1,0 +1,8 @@
+@import "../../node_modules/uikit/src/scss/variables-theme.scss";
+@import "../../node_modules/uikit/src/scss/mixins-theme.scss";
+@import "../../node_modules/uikit/src/scss/uikit-theme.scss";
+
+.uk-navbar-sticky {
+  box-shadow: 0 4px 2px -2px #f1f1f1;
+  opacity: 0.95;
+}
