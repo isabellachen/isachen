@@ -1,5 +1,60 @@
 @import "../base/variables";
+$badge-size: 200px;
 
 .header {
   text-align: center;
+  background-image: url(../assets/images/code-denim-compressed.png);
+  background-repeat: no-repeat;
+  background-color: #edf0f3;
+  background-size: 450px;
+  background-position: 10% 50%;
+
+  @media (min-width: $screen-size-m) {
+    background-size: 850px;
+  }
+
+  @media (min-width: $screen-size-l) {
+    background-position: -30% 50%;
+    background-size: auto;
+  }
+
+  &-wrapper {
+    padding: 1.5rem 0;
+    margin: 0 auto;
+    width: 220px;
+    position: relative;
+
+    &:after {
+      content: "";
+      background-image: url(../assets/images/badge-light-small-compressed.png);
+      background-size: $badge-size $badge-size;
+      display: inline-block;
+      height: $badge-size;
+      width: $badge-size;
+    }
+  }
+
+  &-content {
+    position: absolute;
+    top: 60px;
+  }
+
+  &-title {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 0.4rem;
+  }
+
+  &-description {
+    margin: 0;
+    font-weight: 300;
+    &:after {
+      content: "*";
+      display: block;
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
 }

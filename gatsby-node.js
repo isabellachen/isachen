@@ -74,3 +74,13 @@ exports.createPages = async ({ graphql, actions }) => {
     console.error(err)
   }
 }
+
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        "uikit-util": path.resolve(__dirname, "node_modules/uikit/src/js/util"),
+      },
+    },
+  })
+}

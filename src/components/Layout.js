@@ -3,14 +3,12 @@ import Header from "src/components/Header"
 import { Link } from "gatsby"
 
 const Navigation = ({ location }) => {
-  const [currentPath, updateCurrentPath] = useState(
-    (location && location.pathname) || ""
-  )
+  const currentPath = (location && location.pathname) || ""
 
   return (
     <nav
       className="uk-navbar-container"
-      data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"
+      data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom"
       data-uk-navbar
     >
       <div className="uk-navbar-center">
@@ -32,10 +30,14 @@ export default ({ children, location }) => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const uikit = require("uikit")
+      // const UIkit = require("uikit")
+      const UIkit = require("uikit/dist/js/uikit-core")
+      const Parallax = require("uikit/dist/js/components/parallax")
       const icons = require("uikit/dist/js/uikit-icons.min")
-      uikit.use(icons)
+      UIkit.use(icons)
+      UIkit.component("parallax", Parallax)
       updateReady(true)
+      window.uikit = UIkit
     }
   }, [])
 
@@ -43,11 +45,9 @@ export default ({ children, location }) => {
     <div>
       {ready && (
         <>
+          <Header />
           <Navigation location={location} />
-          <div className="container">
-            <Header />
-            {children}
-          </div>
+          <div className="container">{children}</div>
         </>
       )}
     </div>

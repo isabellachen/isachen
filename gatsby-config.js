@@ -7,7 +7,8 @@
 module.exports = {
   siteMetadata: {
     title: "Isa Chen",
-    description: "Another Web Dev Blog",
+    description:
+      "Computers are like bikinis. They save people a lot of guesswork.",
   },
   plugins: [
     `gatsby-transformer-remark`,
@@ -16,7 +17,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`roboto`, `lato`],
+        fonts: [`roboto\:400,900`, `lato\:100,300,400,700`],
         display: "swap",
       },
     },

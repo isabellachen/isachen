@@ -1,7 +1,5 @@
-import React from "react"
+// import React from "react"
 import { graphql } from "gatsby"
-import Layout from "src/components/Layout"
-import BlogPosts from "src/components/BlogPosts"
 import "src/styles/app.scss"
 
 export default ({ data }) => {
@@ -10,11 +8,6 @@ export default ({ data }) => {
   }
 
   return null
-  // return (
-  //   <Layout>
-  //     <BlogPosts data={data} />
-  //   </Layout>
-  // )
 }
 
 export const query = graphql`
