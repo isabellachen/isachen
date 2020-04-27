@@ -3,8 +3,12 @@ import { StaticQuery, graphql, Link } from "gatsby"
 
 const TitleAndIntro = ({ data }) => {
   const { title, description } = data.site.siteMetadata
+
   return (
-    <div className="header">
+    <div
+      className="header uk-background-cover uk-light uk-flex"
+      uk-parallax="bgy: -100"
+    >
       <div className="header-wrapper">
         <div className="header-content">
           <Link to="/">

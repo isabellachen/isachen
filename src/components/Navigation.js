@@ -1,12 +1,7 @@
 import React from "react"
-import Header from "src/components/Header"
 import { Link } from "gatsby"
-import Uikit from "uikit"
-import Icons from "uikit/dist/js/uikit-icons"
 
-Uikit.use(Icons)
-
-const Navigation = ({ location }) => {
+export default ({ location }) => {
   const currentPath = (location && location.pathname) || ""
 
   return (
@@ -26,15 +21,5 @@ const Navigation = ({ location }) => {
         </ul>
       </div>
     </nav>
-  )
-}
-
-export default ({ children, location }) => {
-  return (
-    <div>
-      <Header />
-      <Navigation location={location} />
-      <div className="container mt-5">{children}</div>
-    </div>
   )
 }

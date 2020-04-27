@@ -3,12 +3,16 @@ $c-warm-light: #d88a83;
 $c-warm-lightest: #faf4d0;
 $c-dark: #394359;
 $c-darker: #303242;
+$c-white: #fff;
 
-$ff-heading: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$ff-body: "lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $ff-heading: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$ff-heading: "Merriweather", Georgia, serif;
+$ff-body: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $screen-size-xxl: 1689px;
 $screen-size-xl: 1200px;
 $screen-size-l: 992px;
 $screen-size-m: 768px;
 $screen-size-s: 576px;
+
+$fs-paragraph: 1.15rem;

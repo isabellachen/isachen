@@ -8,7 +8,9 @@ export default ({ data, location }) => {
     <Layout location={location}>
       <div>
         {edges.map(edge => {
-          const { title, path, date, excerpt } = edge.node.frontmatter
+          console.log(edge.node)
+          const { title, path, date } = edge.node.frontmatter
+          const { excerpt } = edge.node
           return (
             <div key={edge.node.id}>
               <Link to={path}>
@@ -30,6 +32,7 @@ export const query = graphql`
       edges {
         node {
           id
+          excerpt(pruneLength: 500)
           frontmatter {
             path
             date
