@@ -4,6 +4,7 @@ date: "2020-04-18"
 title: "Azure Apps Demo Map"
 category: "portfolio"
 tags: ["frontend", "react"]
+featuredImage: demomap-square.png
 excerpt: "Basic introduction to containers, to get you up to speed with the latest developments in Docker"
 ---
 

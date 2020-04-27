@@ -1,6 +1,6 @@
 import React from "react"
 import Header from "src/components/Header"
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Uikit from "uikit"
 import Icons from "uikit/dist/js/uikit-icons"
 
@@ -8,7 +8,6 @@ Uikit.use(Icons)
 
 const Navigation = ({ location }) => {
   const currentPath = (location && location.pathname) || ""
-
   return (
     <nav
       className="uk-navbar-container"

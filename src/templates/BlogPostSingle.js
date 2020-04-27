@@ -10,7 +10,7 @@ export default ({ data, pageContext }) => {
   return (
     <Layout>
       <div>
-        <h1>{title}</h1>
+        <h1 className="blog_single-title accent-heading">{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
       <div className="blog_single-nav">

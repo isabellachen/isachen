@@ -1,6 +1,7 @@
 // Vendor
 @import "vendor/bootstrap";
 @import "vendor/uikit";
+@import "vendor/gatsby";
 
 // Base Helpers
 @import "base/globals";
@@ -10,4 +11,5 @@
 @import "components/navbar";
 
 //Templates
+@import "templates/blog-post";
 @import "templates/blog-single";

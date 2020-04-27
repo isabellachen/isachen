@@ -1,0 +1,15 @@
+@import "../base/variables";
+
+.blog_post {
+  &-content {
+    display: flex;
+  }
+
+  &-date {
+    flex: 1;
+  }
+
+  &-excerpt {
+    flex: 6;
+  }
+}

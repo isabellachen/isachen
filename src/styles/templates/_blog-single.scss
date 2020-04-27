@@ -6,6 +6,13 @@ $chevron-size: 30px;
     justify-content: space-between;
   }
 
+  &-title {
+    text-align: center;
+    margin: 3rem 0;
+    border-bottom: 1px solid #d9dade;
+    padding-bottom: 1.5rem;
+  }
+
   &-next,
   &-previous {
     display: flex;

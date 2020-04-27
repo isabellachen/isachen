@@ -11,6 +11,8 @@ module.exports = {
       "Computers are like bikinis. They save people a lot of guesswork.",
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     "gatsby-plugin-root-import",
     `gatsby-plugin-sass`,

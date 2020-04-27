@@ -8,16 +8,21 @@ export default ({ data, location }) => {
     <Layout location={location}>
       <div>
         {edges.map(edge => {
-          console.log(edge.node)
           const { title, path, date } = edge.node.frontmatter
           const { excerpt } = edge.node
           return (
-            <div key={edge.node.id}>
-              <Link to={path}>
-                <h2>{title}</h2>
-              </Link>
-              <p>{date}</p>
-              <p>{excerpt}</p>
+            <div className="mb-5" key={edge.node.id}>
+              <div className="blog_post-title">
+                <Link to={path}>
+                  <h2 className="accent-heading">{title}</h2>
+                </Link>
+              </div>
+              <div className="blog_post-content">
+                <div className="blog_post-date">{date}</div>
+                <div className="blog_post-excerpt">
+                  <p>{excerpt}</p>
+                </div>
+              </div>
             </div>
           )
         })}

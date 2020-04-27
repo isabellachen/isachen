@@ -12,7 +12,7 @@ const TitleAndIntro = ({ data }) => {
       <div className="header-wrapper">
         <div className="header-content">
           <Link to="/">
-            <h1 className="header-title">{title}</h1>
+            <div className="header-title">{title}</div>
           </Link>
           <p className="header-description">{description}</p>
         </div>
