@@ -1,6 +1,6 @@
 const path = require("path")
 
-const createBlogPages = (createPage, posts) => {
+const createBlogPages = createPage => {
   const BlogPosts = path.resolve("src/templates/BlogPosts.js")
   createPage({
     path: "/blog",
@@ -8,7 +8,7 @@ const createBlogPages = (createPage, posts) => {
   })
 }
 
-const createPortfolioPages = (createPage, posts) => {
+const createPortfolioPages = createPage => {
   const PortfolioPosts = path.resolve("src/templates/PortfolioPosts.js")
   createPage({
     path: "/portfolio",
