@@ -1,0 +1,8 @@
+@import "../base/variables";
+
+.portfolio_post {
+  display: flex;
+  &-content {
+    margin-left: 2.5rem;
+  }
+}

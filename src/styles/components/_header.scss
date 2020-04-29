@@ -34,13 +34,13 @@ $badge-size: 200px;
     text-transform: uppercase;
     color: $c-white;
     font-size: 3rem;
-    line-height: 3.5rem;
   }
 
   &-description {
     margin: 0;
     font-weight: 300;
     color: $c-dark;
+    font-size: 1rem;
     &:after {
       content: "*";
       display: block;

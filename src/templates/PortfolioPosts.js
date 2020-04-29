@@ -10,18 +10,21 @@ export default ({ data, location }) => {
     <Layout location={location}>
       <div>
         {edges.map(({ node }) => {
-          const { title, path, date, excerpt } = node.frontmatter
+          const { title, path, date } = node.frontmatter
+          const { excerpt } = node
           let featuredImg = node.frontmatter.featuredImage.childImageSharp.fixed
           return (
-            <div key={node.id}>
-              <Link to={path}>
-                <h2 className="accent-heading">{title}</h2>
-              </Link>
-              <div style={{ width: "250px" }}>
+            <div className="portfolio_post mb-5" key={node.id}>
+              <div className="portfolio_post-image">
                 <Img fixed={featuredImg} />
               </div>
-              <p>{date}</p>
-              <p>{excerpt}</p>
+              <div className="portfolio_post-content">
+                <Link to={path}>
+                  <h2 className="accent-heading">{title}</h2>
+                </Link>
+                <p>{date}</p>
+                <p>{excerpt}</p>
+              </div>
             </div>
           )
         })}
@@ -38,16 +41,16 @@ export const query = graphql`
       edges {
         node {
           id
+          excerpt(pruneLength: 500)
           frontmatter {
             path
             date
             title
             category
             tags
-            excerpt
             featuredImage {
               childImageSharp {
-                fixed(width: 400) {
+                fixed(width: 250) {
                   base64
                   width
                   height

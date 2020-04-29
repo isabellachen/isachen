@@ -1,6 +1,6 @@
 import React from "react"
 import Header from "src/components/Header"
-import { graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import Uikit from "uikit"
 import Icons from "uikit/dist/js/uikit-icons"
 
