@@ -3,7 +3,7 @@ path: "/go-for-js-devs"
 date: "2020-04-19"
 title: "Go for JavaScript Developers"
 category: "blog"
-featuredImage: demomap-square.png
+featuredImage: placeholder.png
 tags: ["golang", "fundamentals"]
 excerpt: "Notes on learning GoLang from a JavaScript developer"
 ---

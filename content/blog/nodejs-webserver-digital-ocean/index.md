@@ -3,7 +3,7 @@ path: "/nodejs-webserver-digital-ocean"
 date: "2020-04-20"
 title: "Setting up a NodeJS Web Server on Digital Ocean"
 category: "blog"
-featuredImage: demomap-square.png
+featuredImage: placeholder.png
 tags: ["devops", "nodejs", "getting started"]
 excerpt: "This blog post outline how to get a NodeJS server up and running on Digital Ocean"
 ---

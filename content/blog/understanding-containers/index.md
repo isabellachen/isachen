@@ -4,7 +4,7 @@ date: "2020-04-16"
 title: "Understanding Containers"
 category: "blog"
 tags: ["docker", "getting started"]
-featuredImage: demomap-square.png
+featuredImage: placeholder.png
 excerpt: "Basic introduction to containers, to get you up to speed with the latest developments in Docker"
 ---
 
