@@ -18,13 +18,22 @@ const createPortfolioPages = createPage => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+
+  createBlogPages(createPage)
+  createPortfolioPages(createPage)
+
   const blogPostSingle = path.resolve("src/templates/BlogPostSingle.js")
+  const portfolioPostSingle = path.resolve(
+    "src/templates/PortfolioPostSingle.js"
+  )
+
   try {
-    const query = await graphql(
+    const blogPostsQuery = await graphql(
       `
         query BlogPostsPathQuery {
           allMarkdownRemark(
             sort: { order: ASC, fields: [frontmatter___date] }
+            filter: { frontmatter: { category: { eq: "blog" } } }
           ) {
             edges {
               next {
@@ -52,19 +61,65 @@ exports.createPages = async ({ graphql, actions }) => {
       { limit: 1000 }
     )
 
-    const posts = query.data.allMarkdownRemark.edges
+    const portfolioPostsQuery = await graphql(
+      `
+        query PortfolioPostsPathQuery {
+          allMarkdownRemark(
+            sort: { order: ASC, fields: [frontmatter___date] }
+            filter: { frontmatter: { category: { eq: "portfolio" } } }
+          ) {
+            edges {
+              next {
+                frontmatter {
+                  path
+                  title
+                }
+              }
+              previous {
+                frontmatter {
+                  path
+                  title
+                }
+              }
+              node {
+                frontmatter {
+                  path
+                  category
+                }
+              }
+            }
+          }
+        }
+      `,
+      { limit: 1000 }
+    )
 
-    posts.forEach(({ node, next, previous }) => {
+    const blogPosts = blogPostsQuery.data.allMarkdownRemark.edges
+    const portfolioPosts = portfolioPostsQuery.data.allMarkdownRemark.edges
+
+    blogPosts.forEach(({ node, next, previous }) => {
       const path = node.frontmatter.path
-
-      createBlogPages(createPage, posts)
-      createPortfolioPages(createPage, posts)
 
       createPage({
         path,
         component: blogPostSingle,
         context: {
           slug: path, // use 'slug', as 'path' is reserved keyword. Access in component as props.pageContext.slug
+          previous,
+          next,
+        },
+      })
+    })
+
+    portfolioPosts.forEach(({ node, next, previous }) => {
+      const path = node.frontmatter.path
+
+      createPage({
+        path,
+        component: portfolioPostSingle,
+        context: {
+          slug: path, // use 'slug', as 'path' is reserved keyword. Access in component as props.pageContext.slug
+          directory: path.split("/")[1],
           previous,
           next,
         },

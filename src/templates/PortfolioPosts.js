@@ -51,11 +51,7 @@ export const query = graphql`
             featuredImage {
               childImageSharp {
                 fixed(width: 250) {
-                  base64
-                  width
-                  height
-                  src
-                  srcSet
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
