@@ -4,6 +4,7 @@ date: "2020-04-17"
 title: "In and Out"
 category: "portfolio"
 featuredImage: in_and_out-featured.png
+projectLink: https://www.inandout-barcelona.cn/
 tags: ["frontend", "vueJS", "nuxtJS"]
 excerpt: "Basic introduction to containers, to get you up to speed with the latest developments in Docker"
 ---

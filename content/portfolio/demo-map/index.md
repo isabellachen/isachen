@@ -5,6 +5,7 @@ title: "Azure Apps Demo Map"
 category: "portfolio"
 tags: ["frontend", "react"]
 featuredImage: demomap-featured.png
+projectLink: https://azureappsdemomap.com/
 excerpt: "Basic introduction to containers, to get you up to speed with the latest developments in Docker"
 ---
 

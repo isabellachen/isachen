@@ -9,11 +9,11 @@ export default ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <div>
+      <div className="mb-4">
         <h1 className="blog_single-title accent-heading">{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
-      <div className="blog_single-nav">
+      <div className="blog_single-nav mb-4">
         <div
           className={`blog_single-next ${
             previous && "blog_single-previous_chevron"

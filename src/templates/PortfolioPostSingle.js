@@ -6,7 +6,7 @@ import MasonryGrid from "src/components/MasonryGrid"
 
 export default ({ data, pageContext }) => {
   const { next, previous } = pageContext
-  const title = data.markdownRemark.frontmatter.title
+  const { title, projectLink } = data.markdownRemark.frontmatter
   const html = data.markdownRemark.html
   const masonryImages = data.allFile.edges
     .filter(({ node }) => {
@@ -22,8 +22,13 @@ export default ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <div>
-        <h1 className="blog_single-title accent-heading">{title}</h1>
+      <div className="mb-4">
+        <div className="blog_single-title">
+          <h1 className="accent-heading">{title}</h1>
+          <a className="blog_single-button" href={projectLink}>
+            Visit Website
+          </a>
+        </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <MasonryGrid>
           {masonryImages.map(image => {
@@ -31,7 +36,7 @@ export default ({ data, pageContext }) => {
           })}
         </MasonryGrid>
       </div>
-      <div className="blog_single-nav">
+      <div className="blog_single-nav mb-4">
         <div
           className={`blog_single-next ${
             previous && "blog_single-previous_chevron"
@@ -62,6 +67,7 @@ export const query = graphql`
     markdownRemark(frontmatter: { path: { eq: $slug } }) {
       html
       frontmatter {
+        projectLink
         title
       }
     }
