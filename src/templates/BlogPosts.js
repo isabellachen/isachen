@@ -12,9 +12,9 @@ export default ({ data, location }) => {
           const { excerpt } = edge.node
           return (
             <div className="mb-5" key={edge.node.id}>
-              <div className="blog_post-title">
+              <div>
                 <Link to={path}>
-                  <h2 className="accent-heading">{title}</h2>
+                  <h2 className="blog_post-title accent-heading">{title}</h2>
                 </Link>
               </div>
               <div className="blog_post-content">
@@ -40,7 +40,7 @@ export const query = graphql`
           excerpt(pruneLength: 500)
           frontmatter {
             path
-            date
+            date(formatString: "DD MMMM, YYYY")
             title
             category
             tags

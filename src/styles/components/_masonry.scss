@@ -1,0 +1,10 @@
+.masonry {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1rem;
+
+  &-col {
+    display: grid;
+    grid-gap: 1rem;
+  }
+}

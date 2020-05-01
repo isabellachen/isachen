@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "src/components/Layout"
+import MasonryGrid from "src/components/MasonryGrid"
 
 export default ({ data, pageContext }) => {
   const { next, previous } = pageContext
@@ -18,18 +19,17 @@ export default ({ data, pageContext }) => {
       return childImageSharp !== null && !foundFeatured
     })
     .map(({ node }) => node.childImageSharp.fluid)
-  console.log(masonryImages)
 
   return (
     <Layout>
       <div>
         <h1 className="blog_single-title accent-heading">{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-        <div>
+        <MasonryGrid>
           {masonryImages.map(image => {
             return <Img fluid={image} />
           })}
-        </div>
+        </MasonryGrid>
       </div>
       <div className="blog_single-nav">
         <div

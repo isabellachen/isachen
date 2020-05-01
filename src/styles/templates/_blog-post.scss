@@ -1,12 +1,25 @@
 @import "../base/variables";
 
 .blog_post {
+  &-title {
+    margin: 0;
+    @media (min-width: $screen-size-m) {
+      margin-bottom: 1rem;
+    }
+  }
+
   &-content {
-    display: flex;
+    @media (min-width: $screen-size-m) {
+      display: flex;
+    }
   }
 
   &-date {
     flex: 1;
+    margin: 0.5rem 0;
+    @media (min-width: $screen-size-m) {
+      margin: 0;
+    }
   }
 
   &-excerpt {

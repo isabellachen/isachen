@@ -1,8 +1,43 @@
 @import "../base/variables";
 
 .portfolio_post {
-  display: flex;
+  @media (min-width: $screen-size-m) {
+    display: flex;
+  }
+
+  &-title {
+    margin: 0;
+  }
+
   &-content {
-    margin-left: 2.5rem;
+    @media (min-width: $screen-size-m) {
+      margin-left: 2.5rem;
+    }
+  }
+
+  &-date {
+    margin: 0.5rem 0;
+    @media (min-width: $screen-size-m) {
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.portfolio_post-lg-screen-image {
+  display: none;
+  @media (min-width: $screen-size-m) {
+    display: block;
+  }
+  .gatsby-image-wrapper {
+    @media (min-width: $screen-size-m) {
+      width: 250px;
+    }
+  }
+}
+
+.portfolio_post-s-screen-image {
+  @media (min-width: $screen-size-m) {
+    display: none;
   }
 }

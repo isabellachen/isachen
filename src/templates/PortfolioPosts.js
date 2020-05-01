@@ -12,17 +12,22 @@ export default ({ data, location }) => {
         {edges.map(({ node }) => {
           const { title, path, date } = node.frontmatter
           const { excerpt } = node
-          let featuredImg = node.frontmatter.featuredImage.childImageSharp.fixed
+          let featuredImg = node.frontmatter.featuredImage.childImageSharp.fluid
           return (
             <div className="portfolio_post mb-5" key={node.id}>
-              <div className="portfolio_post-image">
-                <Img fixed={featuredImg} />
+              <div className="portfolio_post-lg-screen-image">
+                <Img fluid={featuredImg} />
               </div>
               <div className="portfolio_post-content">
                 <Link to={path}>
-                  <h2 className="accent-heading">{title}</h2>
+                  <h2 className="portfolio_post-title accent-heading">
+                    {title}
+                  </h2>
                 </Link>
-                <p>{date}</p>
+                <div className="portfolio_post-date">{date}</div>
+                <div className="portfolio_post-s-screen-image">
+                  <Img fluid={featuredImg} />
+                </div>
                 <p>{excerpt}</p>
               </div>
             </div>
@@ -44,14 +49,14 @@ export const query = graphql`
           excerpt(pruneLength: 500)
           frontmatter {
             path
-            date
+            date(formatString: "DD MMMM, YYYY")
             title
             category
             tags
             featuredImage {
               childImageSharp {
-                fixed(width: 250) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 450, maxHeight: 450) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
