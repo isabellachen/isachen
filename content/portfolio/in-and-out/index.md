@@ -3,20 +3,19 @@ path: "/in-and-out"
 date: "2020-04-17"
 title: "In and Out"
 category: "portfolio"
-featuredImage: in_and_out-featured.png
-projectLink: https://www.inandout-barcelona.cn/
+featuredImage: "in_and_out-featured.png"
+projectLink: "https://www.inandout-barcelona.cn/"
 tags: ["frontend", "vueJS", "nuxtJS"]
 excerpt: "Basic introduction to containers, to get you up to speed with the latest developments in Docker"
 ---
 
-## Introduction
+In & Out is a marketing website showcasing attractions in Barcelona. The website is targeted at the Chinese market in mainland China. The website features content by Chinese and Catalan celebrities and entrepreneurs who work in Barcelona. They give interviews and recommendations on the website.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## My Responsibilities
 
-```bash
-vi foobar.js
-```
+For this project, I mainly worked on the tips page and the accompanying interactive map component. Depending on the tip the user has chosen, the map reflected that choice. I also worked in the NodeJS backend implementing a few controllers and fixing bugs.
+
+## Tech Stack
+
+- VueJS with NuxtJS
+- Strapi (a CMS built on NodeJS)

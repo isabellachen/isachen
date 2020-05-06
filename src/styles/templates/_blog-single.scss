@@ -1,6 +1,10 @@
 @import "../base/variables";
 $chevron-size: 30px;
 
+.image-link-wrapper {
+  display: block;
+}
+
 .blog_single {
   &-nav {
     display: flex;
@@ -50,6 +54,22 @@ $chevron-size: 30px;
       height: $chevron-size;
       width: $chevron-size;
       transform: rotate(90deg);
+    }
+  }
+}
+
+.masonry {
+  .gatsby-image-wrapper {
+    height: 100%;
+  }
+}
+
+.blog_single {
+  p {
+    display: flex;
+    justify-content: center;
+    & > img {
+      margin: 1.5rem 0;
     }
   }
 }

@@ -18,11 +18,14 @@ export default ({ data, pageContext }) => {
       // Filter for file nodes that have images and are not featured images
       return childImageSharp !== null && !foundFeatured
     })
-    .map(({ node }) => node.childImageSharp.fluid)
+    .map(({ node }) => {
+      console.log(node.childImageSharp.fluid)
+      return node.childImageSharp.fluid
+    })
 
   return (
     <Layout>
-      <div className="mb-4">
+      <div className="blog_single mb-4">
         <div className="blog_single-title">
           <h1 className="accent-heading">{title}</h1>
           <a className="blog_single-button" href={projectLink}>
@@ -31,8 +34,12 @@ export default ({ data, pageContext }) => {
         </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <MasonryGrid>
-          {masonryImages.map(image => {
-            return <Img fluid={image} />
+          {masonryImages.map((image, index) => {
+            return (
+              <a key={index} className="image-link-wrapper" href={image.src}>
+                <Img fluid={image} />
+              </a>
+            )
           })}
         </MasonryGrid>
       </div>
@@ -75,7 +82,7 @@ export const query = graphql`
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 500, maxHeight: 500) {
+            fluid(maxWidth: 700) {
               ...GatsbyImageSharpFluid
             }
           }

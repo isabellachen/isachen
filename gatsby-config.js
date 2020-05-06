@@ -17,6 +17,20 @@ module.exports = {
     "gatsby-plugin-root-import",
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [

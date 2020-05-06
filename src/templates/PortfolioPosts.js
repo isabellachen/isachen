@@ -10,13 +10,16 @@ export default ({ data, location }) => {
     <Layout location={location}>
       <div>
         {edges.map(({ node }) => {
-          const { title, path, date } = node.frontmatter
+          console.log(node.frontmatter)
+          const { title, path, date, featuredImage } = node.frontmatter
+          console.log(featuredImage && featuredImage.childImageSharp.src)
           const { excerpt } = node
-          let featuredImg = node.frontmatter.featuredImage.childImageSharp.fluid
+          let featuredImgFluid =
+            featuredImage && featuredImage.childImageSharp.fluid
           return (
             <div className="portfolio_post mb-5" key={node.id}>
               <div className="portfolio_post-lg-screen-image">
-                <Img fluid={featuredImg} />
+                {featuredImgFluid && <Img fluid={featuredImgFluid} />}
               </div>
               <div className="portfolio_post-content">
                 <Link to={path}>
@@ -26,7 +29,7 @@ export default ({ data, location }) => {
                 </Link>
                 <div className="portfolio_post-date">{date}</div>
                 <div className="portfolio_post-s-screen-image">
-                  <Img fluid={featuredImg} />
+                  {featuredImgFluid && <Img fluid={featuredImgFluid} />}
                 </div>
                 <p>{excerpt}</p>
               </div>

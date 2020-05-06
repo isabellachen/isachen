@@ -6,15 +6,16 @@ category: "portfolio"
 tags: ["frontend", "react"]
 featuredImage: demomap-featured.png
 projectLink: https://azureappsdemomap.com/
-excerpt: "Basic introduction to containers, to get you up to speed with the latest developments in Docker"
+excerpt: ""
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Demo Map is a website showcasing various projects powered by the latest Microsoft technologies. The website has a colorful concept with animations, to make exploring these sites fun for the user.
 
-```bash
-vi foobar.js
-```
+## My Responsibilities
+
+For this project, I implement the responsive layout of the map, , ensuring that the map and the buttons kept the same ratio and positions depending on the screen size. For smaller screens, an alternative layout for the map and buttons was implemented. The navigation was also impl
+
+## Tech Stack
+
+- VueJS with NuxtJS
+- Strapi (a CMS built on NodeJS)
