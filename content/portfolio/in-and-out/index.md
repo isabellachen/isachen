@@ -13,9 +13,10 @@ In & Out is a marketing website showcasing attractions in Barcelona. The website
 
 ## My Responsibilities
 
-For this project, I mainly worked on the tips page and the accompanying interactive map component. Depending on the tip the user has chosen, the map reflected that choice. I also worked in the NodeJS backend implementing a few controllers and fixing bugs.
+For this project, I mainly worked on the tips page and the accompanying interactive map component. Depending on the tip the user has chosen, the map reflected that choice. I also worked in the NodeJS backend implementing controllers that interfaced with the Strapi content management system and fixing bugs.
 
 ## Tech Stack
 
+- TypeScript
 - VueJS with NuxtJS
 - Strapi (a CMS built on NodeJS)

@@ -17,5 +17,6 @@ For this project, I implement the responsive layout of the map, , ensuring that 
 
 ## Tech Stack
 
+- TypeScript
 - VueJS with NuxtJS
 - Strapi (a CMS built on NodeJS)
