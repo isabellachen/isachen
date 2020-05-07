@@ -3,6 +3,12 @@ $chevron-size: 30px;
 
 .image-link-wrapper {
   display: block;
+  box-shadow: $box-shadow;
+  transition: 0.1s;
+
+  &:hover {
+    transform: scale(1.015);
+  }
 }
 
 .blog_single {
