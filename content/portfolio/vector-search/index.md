@@ -6,7 +6,7 @@ category: "portfolio"
 featuredImage: "vector_search-featured.png"
 projectLink: "https://vectorsearch.azurewebsites.net/"
 tags: ["frontend", "vueJS"]
-excerpt: "Basic introduction to containers, to get you up to speed with the latest developments in Docker"
+showMasonry: true
 ---
 
 Microsoft's Vector Serach engine uses deep learing models to represent data as vectors.

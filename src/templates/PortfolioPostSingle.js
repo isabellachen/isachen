@@ -1,12 +1,13 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "src/components/Layout"
 import MasonryGrid from "src/components/MasonryGrid"
+import BlogPostNavigation from "src/components/BlogPostNavigation"
 
 export default ({ data, pageContext }) => {
   const { next, previous } = pageContext
-  const { title, projectLink } = data.markdownRemark.frontmatter
+  const { title, projectLink, showMasonry } = data.markdownRemark.frontmatter
   const html = data.markdownRemark.html
   const masonryImages = data.allFile.edges
     .filter(({ node }) => {
@@ -25,46 +26,27 @@ export default ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <div className="blog_single mb-4">
-        <div className="blog_single-title">
+      <div className="portfolio_single mb-4">
+        <div className="portfolio_single-title">
           <h1 className="accent-heading">{title}</h1>
-          <a className="blog_single-button" href={projectLink}>
+          <a className="portfolio_single-button" href={projectLink}>
             Visit Website
           </a>
         </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-        <MasonryGrid>
-          {masonryImages.map((image, index) => {
-            return (
-              <a key={index} className="image-link-wrapper" href={image.src}>
-                <Img fluid={image} />
-              </a>
-            )
-          })}
-        </MasonryGrid>
+        {showMasonry && (
+          <MasonryGrid>
+            {masonryImages.map((image, index) => {
+              return (
+                <a key={index} className="image-link-wrapper" href={image.src}>
+                  <Img fluid={image} />
+                </a>
+              )
+            })}
+          </MasonryGrid>
+        )}
       </div>
-      <div className="blog_single-nav mb-4">
-        <div
-          className={`blog_single-next ${
-            previous && "blog_single-previous_chevron"
-          }`}
-        >
-          {previous && (
-            <Link to={previous.frontmatter.path}>
-              {`${previous.frontmatter.title}`}
-            </Link>
-          )}
-        </div>
-        <div
-          className={`blog_single-next ${next && "blog_single-next_chevron"}`}
-        >
-          {next && (
-            <Link
-              to={next.frontmatter.path}
-            >{`${next.frontmatter.title}`}</Link>
-          )}
-        </div>
-      </div>
+      <BlogPostNavigation next={next} previous={previous} />
     </Layout>
   )
 }
@@ -76,6 +58,7 @@ export const query = graphql`
       frontmatter {
         projectLink
         title
+        showMasonry
       }
     }
     allFile(filter: { relativeDirectory: { eq: $directory } }) {

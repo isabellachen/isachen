@@ -6,7 +6,7 @@ category: "portfolio"
 featuredImage: "gen_studio-featured.png"
 projectLink: "https://gen.studio/"
 tags: ["frontend", "react"]
-excerpt: "Gen Studio is an experimental collaboration between The Met, Microsoft, and MIT. This app uses AI for high resolution art creation"
+showMasonry: true
 ---
 
 Gen Studio is a collaboration between the Metropolitan Museum of Art (the Met), Microsoft and MIT. This online experience is an opportunity to explore generated, dreamlike images created by AI. The application is an interface between users and deep learning techniques. By manipulating an interactive graph, users can create new images from existing photos of artifacts from the MET.

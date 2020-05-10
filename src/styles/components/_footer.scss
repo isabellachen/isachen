@@ -1,0 +1,8 @@
+@import "../base/variables";
+
+.footer {
+  height: 4rem;
+  background-color: $c-cool-lighter;
+  display: flex;
+  align-items: center;
+}

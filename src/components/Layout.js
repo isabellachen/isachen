@@ -1,10 +1,8 @@
 import React from "react"
 import Header from "src/components/Header"
+import Footer from "src/components/Footer"
 import { Link } from "gatsby"
 import Uikit from "uikit"
-import Icons from "uikit/dist/js/uikit-icons"
-
-Uikit.use(Icons)
 
 const Navigation = ({ location }) => {
   const currentPath = (location && location.pathname) || ""
@@ -34,6 +32,7 @@ export default ({ children, location }) => {
       <Header />
       <Navigation location={location} />
       <div className="container mt-5">{children}</div>
+      <Footer />
     </div>
   )
 }

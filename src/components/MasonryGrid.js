@@ -10,12 +10,9 @@ export default function Masonry({ children, gap, minWidth = 500, ...rest }) {
   const cols = [...Array(numCols)].map(() => [])
   fillCols(children, cols)
 
-  // const resizeHandler = () =>
-  //   setNumCols(Math.ceil(ref.current.offsetWidth / minWidth))
-
   const resizeHandler = useCallback(() => {
     setNumCols(Math.ceil(ref.current.offsetWidth / minWidth))
-  }, [])
+  }, [minWidth])
 
   useEffect(resizeHandler, [])
   useEffect(() => {

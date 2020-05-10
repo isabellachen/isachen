@@ -6,7 +6,7 @@ category: "portfolio"
 featuredImage: "in_and_out-featured.png"
 projectLink: "https://www.inandout-barcelona.cn/"
 tags: ["frontend", "vueJS", "nuxtJS"]
-excerpt: "Basic introduction to containers, to get you up to speed with the latest developments in Docker"
+showMasonry: true
 ---
 
 In & Out is a marketing website showcasing attractions in Barcelona. The website is targeted at the Chinese market in mainland China. The website features content by Chinese and Catalan celebrities and entrepreneurs who work in Barcelona. They give interviews and recommendations on the website.

@@ -6,7 +6,7 @@ category: "portfolio"
 tags: ["frontend", "react"]
 featuredImage: demomap-featured.png
 projectLink: https://azureappsdemomap.com/
-excerpt: ""
+showMasonry: true
 ---
 
 Demo Map is a website showcasing various projects powered by the latest Microsoft technologies. The website has a colorful concept with animations, to make exploring these sites fun for the user.

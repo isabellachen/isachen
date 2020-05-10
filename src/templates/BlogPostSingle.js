@@ -1,6 +1,7 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "src/components/Layout"
+import BlogPostNavigation from "src/components/BlogPostNavigation"
 
 export default ({ data, pageContext }) => {
   const { next, previous } = pageContext
@@ -13,28 +14,7 @@ export default ({ data, pageContext }) => {
         <h1 className="blog_single-title accent-heading">{title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
-      <div className="blog_single-nav mb-4">
-        <div
-          className={`blog_single-next ${
-            previous && "blog_single-previous_chevron"
-          }`}
-        >
-          {previous && (
-            <Link to={previous.frontmatter.path}>
-              {`${previous.frontmatter.title}`}
-            </Link>
-          )}
-        </div>
-        <div
-          className={`blog_single-next ${next && "blog_single-next_chevron"}`}
-        >
-          {next && (
-            <Link
-              to={next.frontmatter.path}
-            >{`${next.frontmatter.title}`}</Link>
-          )}
-        </div>
-      </div>
+      <BlogPostNavigation next={next} previous={previous} />
     </Layout>
   )
 }
