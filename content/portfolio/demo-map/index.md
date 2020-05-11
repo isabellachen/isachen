@@ -1,6 +1,6 @@
 ---
 path: "/demo-map"
-date: "2020-04-18"
+date: "2020-04-01"
 title: "Azure Apps Demo Map"
 category: "portfolio"
 tags: ["frontend", "react"]

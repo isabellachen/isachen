@@ -1,0 +1,41 @@
+@import "../base/variables";
+$chevron-size: 1.9rem;
+
+.blog_nav {
+  margin-top: 0.5rem;
+  padding: 1.5rem 0;
+  border-top: 2px solid $c-cool-light;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+
+  &-next,
+  &-previous {
+    display: flex;
+    align-items: center;
+  }
+
+  &-next_chevron {
+    &:after {
+      content: "";
+      background-image: url(../assets/icons/chevron-down.svg);
+      background-size: $chevron-size $chevron-size;
+      display: inline-block;
+      height: $chevron-size;
+      width: $chevron-size;
+      transform: rotate(270deg);
+    }
+  }
+
+  &-previous_chevron {
+    &:before {
+      content: "";
+      background-image: url(../assets/icons/chevron-down.svg);
+      background-size: $chevron-size $chevron-size;
+      display: inline-block;
+      height: $chevron-size;
+      width: $chevron-size;
+      transform: rotate(90deg);
+    }
+  }
+}

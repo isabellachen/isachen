@@ -1,6 +1,6 @@
 ---
 path: "/gen-studio"
-date: "2020-04-15"
+date: "2020-04-07"
 title: "Gen Studio"
 category: "portfolio"
 featuredImage: "gen_studio-featured.png"

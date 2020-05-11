@@ -1,6 +1,6 @@
 ---
 path: "/typeform-fb-chat"
-date: "2020-04-10"
+date: "2020-03-30"
 title: "Convert a Typeform for Facebook's Chat Bot"
 category: "portfolio"
 tags: ["nodeJS", "facebookAPI", "typeformAPI", jest]
@@ -43,5 +43,3 @@ Typeform can encode 21 different types of questions. Users can select from drop 
 Some question types could be converted in an obvious way, for example, a Typeform yes-no question type could be translated directly to a quick reply, while a dropdown became a row of buttons stacked on top of each other. Others were less straightforward. Star ratings and opinion scales ended up boiling down to the same thing due to screen real estate on Facebook Messenger — while there was no straightforward way to standardise a question asking for date input without throwing up a webview.
 
 Nevertheless, all the question types, from multiple choice questions to questions that asked for personal details and long form answers, eventually found a counterpart representation on Facebook Messenger.
-
----

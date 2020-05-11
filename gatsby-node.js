@@ -140,6 +140,7 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
   })
 }
 
+//uikit can't be loaded on the server because it does not do window and document checks
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "build-html") {
     actions.setWebpackConfig({

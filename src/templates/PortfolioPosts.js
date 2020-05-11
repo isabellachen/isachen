@@ -10,7 +10,6 @@ export default ({ data, location }) => {
     <Layout location={location}>
       <div>
         {edges.map(({ node }) => {
-          console.log(node.frontmatter)
           const { title, path, date, featuredImage } = node.frontmatter
           console.log(featuredImage && featuredImage.childImageSharp.src)
           const { excerpt } = node
@@ -44,6 +43,7 @@ export default ({ data, location }) => {
 export const query = graphql`
   query PortfolioPostsQuery {
     allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { category: { eq: "portfolio" } } }
     ) {
       edges {

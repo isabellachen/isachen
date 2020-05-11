@@ -1,12 +1,12 @@
 ---
 path: "/webhint"
-date: "2020-04-11"
+date: "2020-03-24"
 title: "Webhint IO, A Testing Engine for the Web"
 category: "portfolio"
 tags: ["nodeJS", "postCSS", "browserslist"]
 featuredImage: webhint-featured.png
 projectLink: https://webhint.io/
-showMasonry: false
+showMasonry: true
 ---
 
 Contributed to two packages to Webhint.io, a NodeJS CLI tool that tests websites for accessibility, speed, compatibility and more. The first package checked if a website has a valid doctype declaration, the second checked for CSS compatibility.
@@ -21,5 +21,3 @@ The hint-compat-api package was a much larger package, and three developers work
 - NodeJS
 - AVA (for unit tests)
 - PostCSS
-
----

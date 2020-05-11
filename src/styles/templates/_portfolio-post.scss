@@ -26,6 +26,7 @@
 
 .portfolio_post-lg-screen-image {
   display: none;
+  box-shadow: $box-shadow;
   @media (min-width: $screen-size-m) {
     display: block;
   }
@@ -37,6 +38,7 @@
 }
 
 .portfolio_post-s-screen-image {
+  box-shadow: $box-shadow;
   @media (min-width: $screen-size-m) {
     display: none;
   }

@@ -1,6 +1,6 @@
 ---
 path: "/in-and-out"
-date: "2020-04-17"
+date: "2020-04-13"
 title: "In and Out"
 category: "portfolio"
 featuredImage: "in_and_out-featured.png"
