@@ -30,6 +30,8 @@ export default ({ children, location }) => {
   return (
     <div>
       <Header />
+      <Link to="/blog">blog</Link>
+      <Link to="/portfolio">portfolio</Link>
       {/* <Navigation location={location} /> */}
       <div className="container mt-5">{children}</div>
       <Footer />
