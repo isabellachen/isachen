@@ -9,8 +9,8 @@ const Navigation = ({ location }) => {
   return (
     <nav
       className="uk-navbar-container"
-      // data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom"
-      // data-uk-navbar
+      uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom"
+      uk-navbar
     >
       <div className="uk-navbar-center">
         <ul className="uk-navbar-nav">
