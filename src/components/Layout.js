@@ -30,7 +30,7 @@ export default ({ children, location }) => {
   return (
     <div>
       <Header />
-      <Navigation location={location} />
+      {/* <Navigation location={location} /> */}
       <div className="container mt-5">{children}</div>
       <Footer />
     </div>
