@@ -9,7 +9,6 @@ export default ({ data, pageContext }) => {
   const { next, previous } = pageContext
   const { title, projectLink, showMasonry } = data.markdownRemark.frontmatter
   const html = data.markdownRemark.html
-  console.log(data.allFile)
   const masonryImages = data.allFile.edges
     .filter(({ node }) => {
       const childImageSharp = node && node.childImageSharp
