@@ -9,8 +9,8 @@ const Navigation = ({ location }) => {
   return (
     <nav
       className="uk-navbar-container"
-      data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom"
-      data-uk-navbar
+      // data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top; bottom: #bottom"
+      // data-uk-navbar
     >
       <div className="uk-navbar-center">
         <ul className="uk-navbar-nav">
@@ -30,9 +30,7 @@ export default ({ children, location }) => {
   return (
     <div>
       <Header />
-      <Link to="/blog">blog</Link>
-      <Link to="/portfolio">portfolio</Link>
-      {/* <Navigation location={location} /> */}
+      <Navigation location={location} />
       <div className="container mt-5">{children}</div>
       <Footer />
     </div>
