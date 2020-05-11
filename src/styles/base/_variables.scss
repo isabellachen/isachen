@@ -1,6 +1,4 @@
-$c-warm: #ba6c65;
-$c-warm-light: #d88a83;
-$c-warm-lightest: #faf4d0;
+$c-cool-lightest: #f8f8f8;
 $c-cool-lighter: #edf0f3;
 $c-cool-light: #d9dade;
 $c-cool-mid: #6c6f89;
@@ -9,6 +7,7 @@ $c-darker: #303242;
 $c-white: #fff;
 
 $c-border-light: $c-cool-light;
+$c-nav: $c-cool-lightest;
 
 $ff-heading: "roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $ff-serif: "Merriweather", Cambria, Cochin, Georgia, "Times New Roman", serif;
