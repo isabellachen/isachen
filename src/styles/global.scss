@@ -11,10 +11,13 @@
 @import "components/masonry";
 @import "components/navigation";
 @import "components/blog-nav";
+@import "components/shared-elements";
 
 //Templates
 @import "templates/blog-post";
 @import "templates/portfolio-post";
 @import "templates/blog-single";
 @import "templates/portfolio-single";
-@import "templates/landing";
+
+//Pages
+@import "pages/landing";

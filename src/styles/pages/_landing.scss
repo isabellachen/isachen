@@ -4,7 +4,6 @@
   &-intro {
     @media (min-width: $screen-size-m) {
       display: flex;
-      margin: 0 2.5rem 2rem;
     }
   }
 
@@ -21,8 +20,20 @@
   &-intro_profile {
     display: none;
     @media (min-width: $screen-size-m) {
+      position: relative;
       display: block;
       flex: 1;
+      top: 2.25rem;
+
+      &:before {
+        content: "";
+        height: 265px;
+        width: 265px;
+        top: -20px;
+        left: -20px;
+        background-color: $c-header-background-color;
+        position: absolute;
+      }
     }
   }
 
@@ -42,10 +53,11 @@
         content: "";
         background-image: url(../assets/images/section-background.png);
         background-size: cover;
-        width: 100%;
+        width: 1040px;
         height: 300px;
         position: absolute;
-        top: 0;
+        top: -1rem;
+        left: -1.3rem;
       }
     }
   }
@@ -53,7 +65,13 @@
   &-action_inner {
     @media (min-width: $screen-size-m) {
       position: absolute;
-      margin: 1.25rem 2.5rem 0;
+      // margin: 1.25rem 2.5rem 0;
     }
+  }
+}
+
+.landing-intro_profile {
+  .gatsby-image-wrapper {
+    box-shadow: $box-shadow;
   }
 }

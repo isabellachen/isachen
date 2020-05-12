@@ -7,8 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: "Isa Chen",
-    description:
-      "Computers are like bikinis. They save people a lot of guesswork.",
+    description: "Full-Stack Web Developer and Web Designer",
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -34,7 +33,7 @@ module.exports = {
       options: {
         fonts: [
           `Roboto\:400,900`,
-          `Lato\:100,300,400,700`,
+          `Lato\:100,300,400, 400i,700`,
           `Merriweather\:400,700`,
         ],
         display: "swap",
