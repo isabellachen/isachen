@@ -20,7 +20,7 @@ so that the information can be understood by other humans. It displays
 details like server location, connections between providers and entities, advanced
 filtering and real time notifications. Check out its capabilities in the [Sidra Docs](https://docs.sidra.dev/).
 
-![sidar-documentation](./sidra-documentation.jpg)
+![sidra-documentation](./sidra-documentation.jpg)
 [_The sidra documentation page_](https://docs.sidra.dev/)
 
 ## Tech Stack

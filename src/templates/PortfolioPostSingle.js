@@ -20,7 +20,6 @@ export default ({ data, pageContext }) => {
       return childImageSharp !== null && !foundFeatured
     })
     .map(({ node }) => {
-      console.log(node.childImageSharp.fluid)
       return node.childImageSharp.fluid
     })
 
