@@ -55,14 +55,11 @@ const Index = ({ data }) => {
               >
                 <span className="btn-text">Portfolio</span>
               </button>
-              <button
-                className="btn"
-                onClick={() => {
-                  navigate("/portfolio")
-                }}
-              >
-                <span className="btn-text">Contact</span>
-              </button>
+              <a href="https://github.com/isabellachen">
+                <button className="btn">
+                  <span className="btn-text">Github</span>
+                </button>
+              </a>
             </div>
           </div>
         </div>

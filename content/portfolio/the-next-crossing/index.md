@@ -1,15 +1,17 @@
 ---
 path: "/the-next-crossing"
-date: "2020-04-10"
-title: "The Next Crossing - Travel Photography Website and Theme"
+date: "2020-08-01"
+title: "The Next Crossing"
 category: "portfolio"
 tags: ["wordpress", "webmasters", "seo"]
-featuredImage: madhouseheaven-featured.png
+clients: ["The Next Crossing"]
+buttonText: "Visit Website"
+featuredImage: tnc-featured.png
 projectLink: https://www.madhouseheaven.com/
 showMasonry: true
 ---
 
-Traveller's Field Guide is a blazing fast theme for travel photography bloggers. It's designed to bring the photographs to the fore of the reader experience. Instead of the usual trailing dropdown, it features a 2 level mega-menu organised by continent than country. The theme's main feature is that it is optimised for speed and SEO.
+The Next Crossing is a blazing fast theme for travel photography bloggers. It's designed to bring the photographs to the fore of the reader experience. Instead of the usual trailing dropdown, it features a 2 level mega-menu organised by continent than country. The theme's main feature is that it is optimised for speed and SEO.
 
 ## Practical Implementation
 
@@ -40,3 +42,5 @@ This custom theme was designed and developed by me. I took a mobile-first approa
 - WordPress
 - PHP
 - CSS
+
+##

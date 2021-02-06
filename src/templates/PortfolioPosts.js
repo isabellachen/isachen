@@ -10,8 +10,7 @@ const PortfolioPosts = ({ data, location }) => {
     <Layout location={location}>
       <div>
         {edges.map(({ node }) => {
-          const { title, path, date, featuredImage } = node.frontmatter
-          console.log(featuredImage && featuredImage.childImageSharp.src)
+          const { title, path, date, featuredImage, clients } = node.frontmatter
           const { excerpt } = node
           let featuredImgFluid =
             featuredImage && featuredImage.childImageSharp.fluid
@@ -23,10 +22,28 @@ const PortfolioPosts = ({ data, location }) => {
               <div className="portfolio_post-content">
                 <Link to={path}>
                   <h2 className="portfolio_post-title accent-heading">
-                    {title}
+                    {title && title}
                   </h2>
                 </Link>
-                <div className="portfolio_post-date">{date}</div>
+                <div className="portfolio_clients">
+                  {clients &&
+                    clients.map((client, i) => {
+                      if (i % 2 !== 1 && i !== clients.length - 1) {
+                        return (
+                          <span key={i}>
+                            <i>{client}</i> |{" "}
+                          </span>
+                        )
+                      } else {
+                        return (
+                          <span key={i}>
+                            <i>{client}</i>
+                          </span>
+                        )
+                      }
+                    })}
+                </div>
+                {/* <div className="portfolio_post-date">{date}</div> */}
                 <div className="portfolio_post-s-screen-image">
                   {featuredImgFluid && <Img fluid={featuredImgFluid} />}
                 </div>
@@ -56,6 +73,7 @@ export const query = graphql`
             title
             category
             tags
+            clients
             featuredImage {
               childImageSharp {
                 fluid(maxWidth: 450, maxHeight: 450) {

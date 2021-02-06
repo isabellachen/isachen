@@ -7,7 +7,12 @@ import BlogPostNavigation from "src/components/BlogPostNavigation"
 
 const PortfolioPostSingle = ({ data, pageContext }) => {
   const { next, previous } = pageContext
-  const { title, projectLink, showMasonry } = data.markdownRemark.frontmatter
+  const {
+    title,
+    projectLink,
+    showMasonry,
+    buttonText,
+  } = data.markdownRemark.frontmatter
   const html = data.markdownRemark.html
   const masonryImages = data.allFile.edges
     .filter(({ node }) => {
@@ -29,7 +34,7 @@ const PortfolioPostSingle = ({ data, pageContext }) => {
         <div className="portfolio_single-title">
           <h1 className="accent-heading">{title}</h1>
           <a className="portfolio_single-button" href={projectLink}>
-            Visit Website
+            {buttonText && buttonText}
           </a>
         </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -58,6 +63,7 @@ export const query = graphql`
         projectLink
         title
         showMasonry
+        buttonText
       }
     }
     allFile(filter: { relativeDirectory: { eq: $directory } }) {

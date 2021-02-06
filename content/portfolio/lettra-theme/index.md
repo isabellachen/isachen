@@ -1,11 +1,13 @@
 ---
 path: "/lettra-theme"
-date: "2020-03-27"
+date: "2020-02-27"
 title: "Lettra - A WordPress Theme for Writers"
 category: "portfolio"
 tags: ["wordpress", "SCSS", "mobileFirst"]
+clients: ["Personal"]
+buttonText: "View on Github"
 featuredImage: lettra-featured.jpg
-projectLink: http://isabella1.sg-host.com/lettra/
+projectLink: https://github.com/isabellachen/lettra
 showMasonry: true
 ---
 
