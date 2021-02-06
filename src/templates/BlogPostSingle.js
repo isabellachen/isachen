@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "src/components/Layout"
 import BlogPostNavigation from "src/components/BlogPostNavigation"
 
-export default ({ data, pageContext }) => {
+const BlogPostSingle = ({ data, pageContext }) => {
   const { next, previous } = pageContext
   const title = data.markdownRemark.frontmatter.title
   const html = data.markdownRemark.html
@@ -29,3 +29,5 @@ export const query = graphql`
     }
   }
 `
+
+export default BlogPostSingle

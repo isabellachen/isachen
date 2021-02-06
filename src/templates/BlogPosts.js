@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "src/components/Layout"
 
-export default ({ data, location }) => {
+const BlogPosts = ({ data, location }) => {
   const { edges } = data.allMarkdownRemark
   return (
     <Layout location={location}>
@@ -51,3 +51,5 @@ export const query = graphql`
     }
   }
 `
+
+export default BlogPosts

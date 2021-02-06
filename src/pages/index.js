@@ -3,7 +3,7 @@ import Layout from "src/components/Layout"
 import Img from "gatsby-image"
 import { navigate } from "gatsby"
 
-export default ({ data }) => {
+const Index = ({ data }) => {
   const profileImg = data.profile.childImageSharp.fixed
   return (
     <Layout>
@@ -82,3 +82,5 @@ export const query = graphql`
     }
   }
 `
+
+export default Index

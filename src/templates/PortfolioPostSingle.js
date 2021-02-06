@@ -5,7 +5,7 @@ import Layout from "src/components/Layout"
 import MasonryGrid from "src/components/MasonryGrid"
 import BlogPostNavigation from "src/components/BlogPostNavigation"
 
-export default ({ data, pageContext }) => {
+const PortfolioPostSingle = ({ data, pageContext }) => {
   const { next, previous } = pageContext
   const { title, projectLink, showMasonry } = data.markdownRemark.frontmatter
   const html = data.markdownRemark.html
@@ -73,3 +73,4 @@ export const query = graphql`
     }
   }
 `
+export default PortfolioPostSingle

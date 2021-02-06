@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "src/components/Layout"
 
-export default ({ data, location }) => {
+const PortfolioPosts = ({ data, location }) => {
   const { edges } = data.allMarkdownRemark
 
   return (
@@ -69,3 +69,5 @@ export const query = graphql`
     }
   }
 `
+
+export default PortfolioPosts
