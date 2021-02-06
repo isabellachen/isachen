@@ -8,3 +8,29 @@
     grid-gap: 1rem;
   }
 }
+
+.masonry {
+  &-columns {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    flex-basis: 100%;
+    .image-link-wrapper {
+      padding: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .masonry-item {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .masonry-item {
+    flex-basis: 33%;
+  }
+}

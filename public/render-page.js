@@ -110,7 +110,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 exports.ssrComponents = {
   "component---cache-dev-404-page-js": (preferDefault(__webpack_require__(/*! ./.cache/dev-404-page.js */ "./.cache/dev-404-page.js"))),
-  "component---src-pages-index-js": (preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js")))
+  "component---src-pages-index-js": (preferDefault(__webpack_require__(/*! ./src/pages/index.js */ "./src/pages/index.js"))),
+  "component---src-templates-portfolio-post-single-js": (preferDefault(__webpack_require__(/*! ./src/templates/PortfolioPostSingle.js */ "./src/templates/PortfolioPostSingle.js")))
   }
 
 
@@ -46503,6 +46504,37 @@ module.exports = JSON.parse("{\"data\":{\"site\":{\"siteMetadata\":{\"title\":\"
 
 /***/ }),
 
+/***/ "./src/components/BlogPostNavigation.js":
+/*!**********************************************!*\
+  !*** ./src/components/BlogPostNavigation.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (({
+  previous,
+  next
+}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: "blog_nav"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: `blog_nav-next ${previous && "blog_nav-previous_chevron"}`
+}, previous && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  to: previous.frontmatter.path
+}, `${previous.frontmatter.title}`)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  className: `blog_nav-next ${next && "blog_nav-next_chevron"}`
+}, next && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  to: next.frontmatter.path
+}, `${next.frontmatter.title}`))));
+
+/***/ }),
+
 /***/ "./src/components/Footer.js":
 /*!**********************************!*\
   !*** ./src/components/Footer.js ***!
@@ -46597,7 +46629,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import Uikit from "uikit"
 
 /* harmony default export */ __webpack_exports__["default"] = (({
   children,
@@ -46618,6 +46649,45 @@ __webpack_require__.r(__webpack_exports__);
     className: "container mt-5"
   }, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(src_components_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 });
+
+/***/ }),
+
+/***/ "./src/components/MasonryCols.js":
+/*!***************************************!*\
+  !*** ./src/components/MasonryCols.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Masonry; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const fillCols = (children, cols) => {
+  children.forEach((child, i) => cols[i % cols.length].push(child));
+};
+
+function Masonry({
+  children,
+  gap,
+  minWidth = 500,
+  ...rest
+}) {
+  const numCols = 3;
+  const cols = [...Array(numCols)].map(() => []);
+  fillCols(children, cols);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", Object.assign({
+    "data-uk-lightbox": true,
+    className: "masonry-columns"
+  }, rest), [...Array(numCols)].map((_, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "masonry-item",
+    key: index,
+    gap: gap
+  }, cols[index])));
+}
 
 /***/ }),
 
@@ -46680,7 +46750,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (({
+
+const Index = ({
   data
 }) => {
   const profileImg = data.profile.childImageSharp.fixed;
@@ -46723,8 +46794,92 @@ __webpack_require__.r(__webpack_exports__);
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "btn-text"
   }, "Contact")))))));
-});
+};
+
 const query = "631347261";
+/* harmony default export */ __webpack_exports__["default"] = (Index);
+
+/***/ }),
+
+/***/ "./src/templates/PortfolioPostSingle.js":
+/*!**********************************************!*\
+  !*** ./src/templates/PortfolioPostSingle.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby-image */ "./node_modules/gatsby-image/index.js");
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(gatsby_image__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var src_components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/components/Layout */ "./src/components/Layout.js");
+/* harmony import */ var src_components_MasonryCols__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/components/MasonryCols */ "./src/components/MasonryCols.js");
+/* harmony import */ var src_components_BlogPostNavigation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/components/BlogPostNavigation */ "./src/components/BlogPostNavigation.js");
+
+
+
+
+
+
+const PortfolioPostSingle = ({
+  data,
+  pageContext
+}) => {
+  const {
+    next,
+    previous
+  } = pageContext;
+  const {
+    title,
+    projectLink,
+    showMasonry
+  } = data.markdownRemark.frontmatter;
+  const html = data.markdownRemark.html;
+  const masonryImages = data.allFile.edges.filter(({
+    node
+  }) => {
+    const childImageSharp = node && node.childImageSharp;
+    const src = childImageSharp && childImageSharp.fluid.src;
+    let re = /featured/;
+    const foundFeatured = src && src.match(re); // Filter for file nodes that have images and are not featured images
+
+    return childImageSharp !== null && !foundFeatured;
+  }).map(({
+    node
+  }) => {
+    return node.childImageSharp.fluid;
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(src_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "portfolio_single mb-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "portfolio_single-title"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "accent-heading"
+  }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "portfolio_single-button",
+    href: projectLink
+  }, "Visit Website")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    dangerouslySetInnerHTML: {
+      __html: html
+    }
+  }), showMasonry && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(src_components_MasonryCols__WEBPACK_IMPORTED_MODULE_3__["default"], null, masonryImages.map((image, index) => {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      key: index,
+      className: "image-link-wrapper",
+      href: image.src
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby_image__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      fluid: image
+    }));
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(src_components_BlogPostNavigation__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    next: next,
+    previous: previous
+  }));
+};
+
+const query = "3715895930";
+/* harmony default export */ __webpack_exports__["default"] = (PortfolioPostSingle);
 
 /***/ }),
 

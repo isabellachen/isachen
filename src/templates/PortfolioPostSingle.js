@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "src/components/Layout"
-import MasonryGrid from "src/components/MasonryGrid"
+import MasonryCols from "src/components/MasonryCols"
 import BlogPostNavigation from "src/components/BlogPostNavigation"
 
 const PortfolioPostSingle = ({ data, pageContext }) => {
@@ -34,7 +34,7 @@ const PortfolioPostSingle = ({ data, pageContext }) => {
         </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         {showMasonry && (
-          <MasonryGrid>
+          <MasonryCols>
             {masonryImages.map((image, index) => {
               return (
                 <a key={index} className="image-link-wrapper" href={image.src}>
@@ -42,7 +42,7 @@ const PortfolioPostSingle = ({ data, pageContext }) => {
                 </a>
               )
             })}
-          </MasonryGrid>
+          </MasonryCols>
         )}
       </div>
       <BlogPostNavigation next={next} previous={previous} />
@@ -64,7 +64,7 @@ export const query = graphql`
       edges {
         node {
           childImageSharp {
-            fluid(maxWidth: 700) {
+            fluid(maxWidth: 1080) {
               ...GatsbyImageSharpFluid
             }
           }
