@@ -1,0 +1,28 @@
+@import "../base/variables";
+
+.resume_post {
+  &-title {
+    margin: 0;
+    @media (min-width: $screen-size-m) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-content {
+    @media (min-width: $screen-size-m) {
+      display: flex;
+    }
+  }
+
+  &-info {
+    flex: 1.5;
+    margin: 0.5rem 0;
+    @media (min-width: $screen-size-m) {
+      margin: 0;
+    }
+  }
+
+  &-excerpt {
+    flex: 6;
+  }
+}

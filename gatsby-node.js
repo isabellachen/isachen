@@ -8,6 +8,14 @@ const createBlogPages = createPage => {
   })
 }
 
+const createResumePages = createPage => {
+  const ResumePosts = path.resolve("src/templates/ResumePosts.js")
+  createPage({
+    path: "/resume",
+    component: ResumePosts,
+  })
+}
+
 const createPortfolioPages = createPage => {
   const PortfolioPosts = path.resolve("src/templates/PortfolioPosts.js")
   createPage({
@@ -21,6 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   createBlogPages(createPage)
   createPortfolioPages(createPage)
+  createResumePages(createPage)
 
   const blogPostSingle = path.resolve("src/templates/BlogPostSingle.js")
   const portfolioPostSingle = path.resolve(

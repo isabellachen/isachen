@@ -24,7 +24,7 @@ const Index = ({ data }) => {
                 performance of your website?
               </p>
               <p>
-                I have worked on projects with both big clients like Microsoft,
+                I have worked on projects with both big clients like Microsoft
                 and small businesses and NGOs. I can help you design and code
                 your web project. My experience in both development and design
                 means your project will look cool on the outside and be tidy and
@@ -39,11 +39,11 @@ const Index = ({ data }) => {
             <div className="landing_content">
               <p>
                 I love working on tech projects - making websites and apps is
-                more than a profession for me, it's a passion. I have experience
-                with a large variety of technologies both on the front-end and
-                back-end, so you can trust me to find you the best solution for
-                your needs. What I provide is strategic thinking that bridges
-                design and development.
+                more than a profession for me; it's a passion. I have experience
+                with technologies both on the front-end and backend, so you can
+                trust me to find you the best solution for your needs. What I
+                provide is strategic thinking that bridges design, development
+                and content creation.
               </p>
             </div>
             <div>

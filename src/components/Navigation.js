@@ -9,8 +9,8 @@ export default ({ location }) => {
     <Headroom pinStart={280}>
       <nav className="nav">
         <ul className="uk-navbar-nav">
-          <li className={`${currentPath === "/blog" ? "uk-active" : ""}`}>
-            <Link to="/blog">blog</Link>
+          <li className={`${currentPath === "/resume" ? "uk-active" : ""}`}>
+            <Link to="/resume">resume</Link>
           </li>
           <li className={`${currentPath === "/portfolio" ? "uk-active" : ""}`}>
             <Link to="/portfolio">portfolio</Link>

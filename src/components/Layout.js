@@ -15,7 +15,7 @@ export default ({ children, location }) => {
   })
 
   return (
-    <div class="layout_container">
+    <div className="layout_container">
       <Header />
       <Navigation location={location} />
       <div className="container mt-5 main_content">{children}</div>
