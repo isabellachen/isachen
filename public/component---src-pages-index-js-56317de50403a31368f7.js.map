@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/pages/index.js"],"names":["window","location"],"mappings":"2FAAA,OAAe,qBAKb,MAJsB,oBAAXA,SACTA,OAAOC,SAAW,SAGb","file":"component---src-pages-index-js-56317de50403a31368f7.js","sourcesContent":["export default () => {\n  if (typeof window !== \"undefined\") {\n    window.location = \"/blog\"\n  }\n\n  return null\n}\n"],"sourceRoot":""}

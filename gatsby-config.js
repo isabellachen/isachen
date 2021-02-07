@@ -16,6 +16,12 @@ module.exports = {
     "gatsby-plugin-root-import",
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/images/gatsby-icon.png",
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
