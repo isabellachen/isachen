@@ -34,7 +34,7 @@ filtering and real time notifications. Check out its capabilities in the [Sidra 
 
 ## My Responsibilities
 
-The user dashboard had to display a large variety of data. It also had filtering capabilities,
+I worked on the user dashboard, which had to display a large variety of data. It also had filtering capabilities,
 and the ability to edit information relating to the stored data. Some things I worked on:
 
 - Dynamic grid with variable columns

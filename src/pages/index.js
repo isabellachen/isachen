@@ -40,7 +40,7 @@ const Index = ({ data }) => {
               <p>
                 I love working on tech projects - making websites and apps is
                 more than a profession for me; it's a passion. I have experience
-                with technologies both on the front-end and backend, so you can
+                with technologies both on the frontend and backend, so you can
                 trust me to find you the best solution for your needs. What I
                 provide is strategic thinking that bridges design, development
                 and content creation.

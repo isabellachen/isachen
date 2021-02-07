@@ -4,14 +4,14 @@ date: "2020-08-01"
 title: "The Next Crossing"
 category: "portfolio"
 featuredImage: "tnc-featured.png"
-projectLink: "https://www.madhouseheaven.com/"
+projectLink: "https://www.thenextcrossing.com/"
 tags: ["wordpress", "webmasters", "seo"]
 clients: ["The Next Crossing"]
 buttonText: "Visit Website"
 showMasonry: true
 ---
 
-The Next Crossing is a blazing fast theme for travel photography bloggers. It's designed to bring the photographs to the fore of the reader experience. Instead of the usual trailing dropdown, it features a 2 level mega-menu organised by continent than country. The theme's main feature is that it is optimised for speed and SEO.
+The Next Crossing is a blazing fast theme for travel photography bloggers. It's designed to bring the photographs to the fore of the reader experience. Instead of the usual trailing dropdown, it features a 2 level mega-menu organised by continent. The theme's main feature is that it is optimised for speed and SEO.
 
 ## Practical Implementation
 
