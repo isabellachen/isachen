@@ -49,3 +49,9 @@ $badge-size: 200px;
     }
   }
 }
+
+@media (max-width: 1366px) {
+  .header {
+    display: none;
+  }
+}
